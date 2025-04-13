@@ -1,0 +1,19 @@
+CREATE TABLE Composter (
+    Id INT IDENTITY PRIMARY KEY,
+    Uuid UNIQUEIDENTIFIER NOT NULL DEFAULT (newid()), 
+    DisplayName NVARCHAR(100) NOT NULL,
+    StreetName VARCHAR(100) NOT NULL,
+    StreetNumber VARCHAR(10) NULL,
+    Neighborhood VARCHAR(30) NOT NULL,
+    City VARCHAR(80) NOT NULL,
+    State VARCHAR(2) NOT NULL,
+    ZipCode VARCHAR(8) NOT NULL,
+    Country VARCHAR(30) NOT NULL,
+    PhoneNumber VARCHAR(11) NULL,
+    Email VARCHAR(100) NULL,
+    Latitude DECIMAL(9,6) NOT NULL,
+    Longitude DECIMAL(9,6) NOT NULL,
+    CreatedAt DATETIMEOFFSET NOT NULL DEFAULT getdate(),
+    UpdatedAt DATETIMEOFFSET NOT NULL DEFAULT getdate(),
+    Deleted BIT NOT NULL DEFAULT 0
+);
